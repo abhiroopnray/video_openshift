@@ -9,11 +9,14 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <!--<profiles>
+    <profiles>
         <profile>
             <id>openshift</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
             <build>
-                <finalName>testbed</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -27,7 +30,7 @@
                 </plugins>
             </build>
         </profile>
-    </profiles>-->
+    </profiles>
 
     <dependencies>
         <dependency>
