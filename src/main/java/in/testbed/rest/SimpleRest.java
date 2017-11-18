@@ -1,5 +1,6 @@
 package in.testbed.rest;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
@@ -7,6 +8,7 @@ import javax.ws.rs.core.Response;
 public class SimpleRest {
 
     @Path("/json")
+    @GET
     public Response simpleJsonResponse() {
         return Response.ok().entity(generateData()).build();
     }
