@@ -1,20 +1,18 @@
 package in.testbed.rest;
 
-import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 @Path("/v1")
 public class SimpleRest {
 
     @Path("/json")
-    public Response simpleJsonResponse(){
+    public Response simpleJsonResponse() {
         return Response.ok().entity(generateData()).build();
     }
 
 
-    private Status generateData(){
+    private Status generateData() {
         Status status = new Status();
         status.setCode(200);
         status.setDesc("Simple desc");
@@ -22,7 +20,7 @@ public class SimpleRest {
         return status;
     }
 
-    class Status{
+    class Status {
 
         private String name;
         private String desc;
