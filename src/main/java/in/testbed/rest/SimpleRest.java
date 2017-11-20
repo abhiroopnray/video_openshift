@@ -1,17 +1,27 @@
 package in.testbed.rest;
 
+import org.jboss.logging.Logger;
+
+import javax.annotation.PostConstruct;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Path("/v1")
+@Path("v1")
 public class SimpleRest {
 
-    @Path("/json")
+    private static Logger LOG = Logger.getLogger(SimpleRest.class);
+
+    @Path("json")
     @GET
     public Response simpleJsonResponse() {
 
         return Response.ok().entity(generateData()).build();
+    }
+
+    @PostConstruct
+    public void init(){
+        LOG.info("initialized the application");
     }
 
 
