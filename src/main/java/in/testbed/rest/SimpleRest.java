@@ -7,12 +7,12 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Path("v1")
+@Path("/v1")
 public class SimpleRest {
 
     private static Logger LOG = Logger.getLogger(SimpleRest.class);
 
-    @Path("json")
+    @Path("/json")
     @GET
     public Response simpleJsonResponse() {
 
