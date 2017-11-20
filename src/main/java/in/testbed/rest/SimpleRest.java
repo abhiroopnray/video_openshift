@@ -21,7 +21,7 @@ public class SimpleRest {
 
     @PostConstruct
     public void init(){
-        LOG.info("initialized the application");
+        LOG.info("initialized the class");
     }
 
 
