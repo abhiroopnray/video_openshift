@@ -10,6 +10,7 @@ public class SimpleRest {
     @Path("/json")
     @GET
     public Response simpleJsonResponse() {
+
         return Response.ok().entity(generateData()).build();
     }
 
@@ -22,7 +23,7 @@ public class SimpleRest {
         return status;
     }
 
-    class Status {
+   private class Status {
 
         private String name;
         private String desc;
