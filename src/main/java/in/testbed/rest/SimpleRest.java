@@ -1,16 +1,17 @@
 package in.testbed.rest;
 
-import org.jboss.logging.Logger;
+
 
 import javax.annotation.PostConstruct;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
+import java.util.logging.Logger;
 
 @Path("/v1")
 public class SimpleRest {
 
-    private static Logger LOG = Logger.getLogger(SimpleRest.class);
+    private static Logger LOG = Logger.getLogger(SimpleRest.class.getSimpleName());
 
     @Path("/json")
     @GET
