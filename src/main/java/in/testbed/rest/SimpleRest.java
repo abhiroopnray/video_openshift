@@ -8,7 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 import java.util.logging.Logger;
 
-@Path("/v1")
+@Path("")
 @RequestScoped
 public class SimpleRest {
 
@@ -18,7 +18,7 @@ public class SimpleRest {
     @GET
     public Response simpleJsonResponse() {
 
-        return Response.ok().entity(generateData()).build();
+        return Response.status(200).entity(generateData()).build();
     }
 
     @PostConstruct
