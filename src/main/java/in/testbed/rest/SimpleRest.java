@@ -1,14 +1,15 @@
 package in.testbed.rest;
 
 
-
 import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 import java.util.logging.Logger;
 
 @Path("/v1")
+@RequestScoped
 public class SimpleRest {
 
     private static Logger LOG = Logger.getLogger(SimpleRest.class.getSimpleName());
@@ -21,7 +22,7 @@ public class SimpleRest {
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         LOG.info("initialized the class");
     }
 
@@ -34,7 +35,7 @@ public class SimpleRest {
         return status;
     }
 
-   private class Status {
+    private class Status {
 
         private String name;
         private String desc;
