@@ -8,12 +8,7 @@ import javax.ws.rs.core.Application;
 import java.util.Collections;
 import java.util.Set;
 
-@ApplicationPath("")
+@ApplicationPath("/rest")
 public class JaxRsActivator extends Application {
     /* class body intentionally left blank */
-    @Override
-    public Set<Class<?>> getClasses() {
-
-        return Collections.emptySet();
-    }
 }
